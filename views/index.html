@@ -9,14 +9,14 @@
 
   <body>
     <div class="container">
-      <h1>Exercise tracker</h1>
-      <form action="/api/users" method="post">
+      <h1 class="light-text">Exercise tracker</h1>
+      <form action="/api/users" method="post" class="new-user">
         <h2>Create a New User</h2>
         <p><code>POST /api/users</code></p>
         <input id="uname" type="text" name="username" placeholder="username" />
         <input type="submit" value="Submit" />
       </form>
-      <form action="/api/users/:_id/exercises" id="exercise-form" method="post">
+      <form action="/api/users/:_id/exercises" id="exercise-form" method="post" class="exercise">
         <h2>Add exercises</h2>
         <p><code>POST /api/users/:_id/exercises</code></p>
         <input id="uid" type="text" name=":_id" placeholder=":_id" />
@@ -26,11 +26,11 @@
         <input type="submit" value="Submit" />
       </form>
       <p>
-        <strong>GET user's exercise log: </strong>
+        <strong class="light-text">GET user's exercise log: </strong>
         <code>GET /api/users/:_id/logs?[from][&amp;to][&amp;limit]</code>
       </p>
-      <p><strong>[ ]</strong> = optional</p>
-      <p><strong>from, to</strong> = dates (yyyy-mm-dd); <strong>limit</strong> = number</p>
+      <p class="light-text"><strong>[ ]</strong> = optional</p>
+      <p class="light-text"><strong>from, to</strong> = dates (yyyy-mm-dd); <strong>limit</strong> = number</p>
     </div>
     <script>
       const exerciseForm = document.getElementById("exercise-form");
